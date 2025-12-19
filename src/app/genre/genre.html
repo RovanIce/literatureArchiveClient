@@ -1,0 +1,20 @@
+<h1>Genres</h1>
+
+<table class = "table table-striped">
+    <thead>
+        <td>Id</td>
+        <td>Genre</td>
+        <td>keyword</td>
+        <td>rating</td>
+    </thead>
+    <tbody>
+        @for (genre of (genres$ | async); track $index){
+            <tr>
+                <td>{{genre.id}}</td>
+                <td>{{genre.genre1}}</td>
+                <td>{{genre.keyword}}</td>
+                <td>{{genre.rating}}</td>
+            </tr>
+        }
+    </tbody>
+</table>

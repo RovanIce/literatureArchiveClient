@@ -1,0 +1,19 @@
+<h1>Novels</h1>
+<table class ="table table-striped">
+    <thead>
+        <td>ISBN</td>
+        <td>Title</td>
+        <td>Author</td>
+        <td>Genre</td>
+    </thead>
+    <tbody>
+    @for (novel of (novels$| async); track $index){
+        <tr>    
+            <td>{{novel.isbn}}</td>
+            <td>{{novel.title}}</td>
+            <td>{{novel.author}}</td>
+            <td>{{novel.genre}}</td>
+        </tr>
+        }
+    </tbody>
+</table>

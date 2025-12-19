@@ -1,0 +1,17 @@
+<header>
+    <mat-toolbar color="primary">
+<button mat-icon-button [routerLink]="['/']">
+        <mat-icon>home</mat-icon>
+    </button>
+<a mat-flat-button color="primary" [routerLink]="['/submit']">Submissions</a>
+<a mat-flat-button color="primary" [routerLink]="['/genre']">Genre</a>
+<a mat-flat-button color="primary" [routerLink]="['/novel']">Novel</a>
+    <span class="separator"></span>
+    @if(isloggedin){
+        <a mat-flat-button color="primary" (click)="authservice.Logout()">Logout</a>
+    }
+    @else {
+        <a mat-flat-button color="primary" [routerLink]="['/login']">Login</a>
+    }
+</mat-toolbar>
+</header>
